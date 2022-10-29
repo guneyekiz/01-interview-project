@@ -19,10 +19,10 @@ public class Task extends TestBase {
     @Test
     public void addElements() {
         //Line 20 to 25 is only setup
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS); //Implicit wait implemented
+        driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS); //Implicit wait implemented
         driver.get(ConfigurationReader.getProperty("hero.url"));
-        WebDriverWait wait = new WebDriverWait(driver, 3);
         PageClass page = new PageClass();// POM implemented
+        WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.elementToBeClickable(page.addElementBtn)); //Explicit wait implemented
 
         //between line 29 to 35 I assert text of the webElement and print the result for you to read
@@ -78,9 +78,9 @@ public class Task extends TestBase {
 
     @Test
     public void deleteElements() {
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS); //Implicit wait implemented
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); //Implicit wait implemented
         driver.get(ConfigurationReader.getProperty("hero.url"));
-        WebDriverWait wait = new WebDriverWait(driver, 3);
+        WebDriverWait wait = new WebDriverWait(driver, 5);
         PageClass page = new PageClass();// POM implemented
         wait.until(ExpectedConditions.elementToBeClickable(page.addElementBtn)); //Explicit wait implemented
 
