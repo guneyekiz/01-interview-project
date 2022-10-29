@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default Suite]">
+  <test thread-count="5" name="01-interview-project(failed)">
+    <classes>
+      <class name="com.InterviewTask.tests.Task">
+        <methods>
+          <include name="fail"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.InterviewTask.tests.Task -->
+    </classes>
+  </test> <!-- 01-interview-project(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->
