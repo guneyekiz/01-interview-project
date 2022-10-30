@@ -24,6 +24,8 @@ public class Task extends TestBase {
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.elementToBeClickable(page.addElementBtn)); //Explicit wait implemented
 
+        String actualTitle = "The Internet";
+        Assert.assertEquals(actualTitle, driver.getTitle());
         //text of the webElements are asserted and printed the result for you to read
         String expectedText1 = "Add/Remove Elements";
         Assert.assertEquals(page.addRemoveElementsText.getText(), expectedText1);
@@ -59,7 +61,7 @@ public class Task extends TestBase {
         //delete button text is asserted, and printed for you to read
         String expectedText3 = "Delete";
         Assert.assertTrue(page.deleteBtn.isDisplayed());
-        Assert.assertEquals(page.deleteBtn.getText(),expectedText3);//we could also loop and assert all delete btn elements
+        Assert.assertEquals(page.deleteBtn.getText(), expectedText3);//we could also loop and assert all delete btn elements
         System.out.println("Actual Result = [" + page.deleteBtn.getText() + "] , Expected Result = [" + expectedText3 + "]");
 
 
@@ -74,13 +76,16 @@ public class Task extends TestBase {
 
     }
 
-    @Test
+    @Test//end-to-end version, (elements are added and deleted)
     public void deleteElements() {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); //Implicit wait implemented
         driver.get(ConfigurationReader.getProperty("hero.url"));
         WebDriverWait wait = new WebDriverWait(driver, 5);
         PageClass page = new PageClass();// POM implemented
         wait.until(ExpectedConditions.elementToBeClickable(page.addElementBtn)); //Explicit wait implemented
+
+        String actualTitle = "The Internet";
+        Assert.assertEquals(actualTitle, driver.getTitle());
 
         int howManyElement = 5;
 
