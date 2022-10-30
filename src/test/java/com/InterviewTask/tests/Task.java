@@ -2,7 +2,6 @@ package com.InterviewTask.tests;
 
 import com.InterviewTask.pages.herokuapp.PageClass;
 import com.InterviewTask.utils.ConfigurationReader;
-import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,14 +17,14 @@ public class Task extends TestBase {
 
     @Test
     public void addElements() {
-        //Line 20 to 25 is only setup
+        //basic setup
         driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS); //Implicit wait implemented
         driver.get(ConfigurationReader.getProperty("hero.url"));
         PageClass page = new PageClass();// POM implemented
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.elementToBeClickable(page.addElementBtn)); //Explicit wait implemented
 
-        //between line 29 to 35 I assert text of the webElement and print the result for you to read
+        //text of the webElements are asserted and printed the result for you to read
         String expectedText1 = "Add/Remove Elements";
         Assert.assertEquals(page.addRemoveElementsText.getText(), expectedText1);
         System.out.println("Actual Result = [" + page.addRemoveElementsText.getText() + "] , Expected Result = [" + expectedText1 + "]");
@@ -34,7 +33,7 @@ public class Task extends TestBase {
         Assert.assertEquals(page.addElementBtn.getText(), expectedText2);
         System.out.println("Actual Result = [" + page.addElementBtn.getText() + "] , Expected Result = [" + expectedText2 + "]");
 
-        //Line 38,46 is asserting if elements are displaying or not
+        //asserting if elements are displaying or not
         Assert.assertTrue(page.addRemoveElementsText.isDisplayed());
         Assert.assertTrue(page.addElementBtn.isDisplayed());
         try {
@@ -46,26 +45,26 @@ public class Task extends TestBase {
         }
 
 
-        //Line 50 We are adding the number of the element we want to add
+        //We are adding the number of the element we want to add
         int howManyElement = 5;
 
 
-        //Line 54 to 58 we are adding the elements
+        //Elements are added
         for (int i = 0; i < howManyElement; i++) {
 
             page.addElementBtn.click();
 
         }
 
-        //line 60 to 64 we are asserting delete button text and printing for you to read
+        //delete button text is asserted, and printed for you to read
         String expectedText3 = "Delete";
         Assert.assertTrue(page.deleteBtn.isDisplayed());
-        Assert.assertEquals(page.deleteBtn.getText(), expectedText3);
+        Assert.assertEquals(page.deleteBtn.getText(),expectedText3);//we could also loop and assert all delete btn elements
         System.out.println("Actual Result = [" + page.deleteBtn.getText() + "] , Expected Result = [" + expectedText3 + "]");
 
 
         //stored all the elements in the list, since class is not unique it will store multiple elements
-        List<WebElement> countElements = page.deleteALlElements;
+        List<WebElement> countElements = page.deleteALlElementsButton;
         int actualResult = countElements.size();
 
 
@@ -85,7 +84,7 @@ public class Task extends TestBase {
 
         int howManyElement = 5;
 
-        //Line 91 to 95  we are adding the elements
+        //Elements are added
         for (int i = 0; i < howManyElement; i++) {
 
             page.addElementBtn.click();
@@ -93,7 +92,7 @@ public class Task extends TestBase {
         }
 
         //stored all the elements in the list, since class is not unique it will store multiple elements
-        List<WebElement> countElements = page.deleteALlElements;
+        List<WebElement> countElements = page.deleteALlElementsButton;
 
         Assert.assertEquals(countElements.size(), howManyElement);
 
@@ -102,7 +101,7 @@ public class Task extends TestBase {
             page.deleteBtn.click();
         }
 
-        countElements = driver.findElements(By.xpath("//*[@class=\"added-manually\"]"));
+        countElements = page.deleteALlElementsButton;
         if (countElements.size() != 0) {
             Assert.fail("countElementSize should be zero but it is " + countElements.size());
         }

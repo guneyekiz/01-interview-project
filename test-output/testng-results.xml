@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default Suite" duration-ms="13847" started-at="2022-10-30T15:04:47 EDT" finished-at="2022-10-30T15:05:01 EDT">
+  <suite name="Default Suite" duration-ms="13907" started-at="2022-10-30T15:09:21 EDT" finished-at="2022-10-30T15:09:35 EDT">
     <groups>
     </groups>
-    <test name="01-interview-project" duration-ms="13847" started-at="2022-10-30T15:04:47 EDT" finished-at="2022-10-30T15:05:01 EDT">
+    <test name="01-interview-project" duration-ms="13907" started-at="2022-10-30T15:09:21 EDT" finished-at="2022-10-30T15:09:35 EDT">
       <class name="com.InterviewTask.tests.Task">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.InterviewTask.tests.Task@9660f4e]" name="setUp" is-config="true" duration-ms="1761" started-at="2022-10-30T15:04:47 EDT" finished-at="2022-10-30T15:04:49 EDT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.InterviewTask.tests.Task@9660f4e]" name="setUp" is-config="true" duration-ms="1840" started-at="2022-10-30T15:09:21 EDT" finished-at="2022-10-30T15:09:23 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="deleteElements()[pri:0, instance:com.InterviewTask.tests.Task@9660f4e]" name="deleteElements" duration-ms="11430" started-at="2022-10-30T15:04:49 EDT" finished-at="2022-10-30T15:05:00 EDT">
+        <test-method status="PASS" signature="deleteElements()[pri:0, instance:com.InterviewTask.tests.Task@9660f4e]" name="deleteElements" duration-ms="11401" started-at="2022-10-30T15:09:23 EDT" finished-at="2022-10-30T15:09:35 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteElements -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.InterviewTask.tests.Task@9660f4e]" name="tearDown" is-config="true" duration-ms="626" started-at="2022-10-30T15:05:00 EDT" finished-at="2022-10-30T15:05:01 EDT">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.InterviewTask.tests.Task@9660f4e]" name="tearDown" is-config="true" duration-ms="635" started-at="2022-10-30T15:09:35 EDT" finished-at="2022-10-30T15:09:35 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

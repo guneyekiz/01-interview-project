@@ -31,12 +31,9 @@ public class PageClass {
 
     @FindBys
             ({
-
                     @FindBy(xpath = "//button[@class='added-manually']")
-
-
             })
-    public List<WebElement> deleteALlElements;
+    public List<WebElement> deleteALlElementsButton;
 
 
 
