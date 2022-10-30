@@ -123,4 +123,41 @@ public class Task extends TestBase {
     }
 
 
+    @Test
+    public void boundaryTestAddElement() {
+
+        driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS); //Implicit wait implemented
+        driver.get(ConfigurationReader.getProperty("hero.url"));
+        PageClass page = new PageClass();// POM implemented
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.elementToBeClickable(page.addElementBtn)); //Explicit wait implemented
+
+
+        int howManyElement = 2000;
+
+        //Elements are added
+        for (int i = 0; i < howManyElement; i++) {
+
+            page.addElementBtn.click();
+            wait.until(ExpectedConditions.elementToBeClickable(page.addElementBtn)); //Explicit wait implemented
+
+        }
+
+        List<WebElement> countElements = page.deleteALlElementsButton;
+        int actualResult = countElements.size();
+        Assert.assertEquals(actualResult, howManyElement);
+
+        int countDeleteBtnInLoop = 0;
+        //Asserting all delete button text
+        for (WebElement countElement : countElements) {
+            System.out.println(++countDeleteBtnInLoop + " - " + countElement.getText());
+            if (!countElement.getText().equals("Delete")) {
+                Assert.fail();
+            }
+
+        }
+        Assert.assertEquals(countDeleteBtnInLoop, howManyElement);
+
+    }
+
 }
