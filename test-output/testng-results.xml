@@ -1,33 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default Suite" duration-ms="16166" started-at="2022-10-28T23:21:18 EDT" finished-at="2022-10-28T23:21:34 EDT">
+  <suite name="Default Suite" duration-ms="13847" started-at="2022-10-30T15:04:47 EDT" finished-at="2022-10-30T15:05:01 EDT">
     <groups>
     </groups>
-    <test name="01-interview-project" duration-ms="16166" started-at="2022-10-28T23:21:18 EDT" finished-at="2022-10-28T23:21:34 EDT">
+    <test name="01-interview-project" duration-ms="13847" started-at="2022-10-30T15:04:47 EDT" finished-at="2022-10-30T15:05:01 EDT">
       <class name="com.InterviewTask.tests.Task">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.InterviewTask.tests.Task@68bbe345]" name="setUp" is-config="true" duration-ms="1719" started-at="2022-10-28T23:21:18 EDT" finished-at="2022-10-28T23:21:20 EDT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.InterviewTask.tests.Task@9660f4e]" name="setUp" is-config="true" duration-ms="1761" started-at="2022-10-30T15:04:47 EDT" finished-at="2022-10-30T15:04:49 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="addElements()[pri:0, instance:com.InterviewTask.tests.Task@68bbe345]" name="addElements" duration-ms="4447" started-at="2022-10-28T23:21:20 EDT" finished-at="2022-10-28T23:21:24 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addElements -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.InterviewTask.tests.Task@68bbe345]" name="tearDown" is-config="true" duration-ms="626" started-at="2022-10-28T23:21:24 EDT" finished-at="2022-10-28T23:21:25 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.InterviewTask.tests.Task@68bbe345]" name="setUp" is-config="true" duration-ms="1191" started-at="2022-10-28T23:21:25 EDT" finished-at="2022-10-28T23:21:26 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="deleteElements()[pri:0, instance:com.InterviewTask.tests.Task@68bbe345]" name="deleteElements" duration-ms="7501" started-at="2022-10-28T23:21:26 EDT" finished-at="2022-10-28T23:21:34 EDT">
+        <test-method status="PASS" signature="deleteElements()[pri:0, instance:com.InterviewTask.tests.Task@9660f4e]" name="deleteElements" duration-ms="11430" started-at="2022-10-30T15:04:49 EDT" finished-at="2022-10-30T15:05:00 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteElements -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.InterviewTask.tests.Task@68bbe345]" name="tearDown" is-config="true" duration-ms="633" started-at="2022-10-28T23:21:34 EDT" finished-at="2022-10-28T23:21:34 EDT">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.InterviewTask.tests.Task@9660f4e]" name="tearDown" is-config="true" duration-ms="626" started-at="2022-10-30T15:05:00 EDT" finished-at="2022-10-30T15:05:01 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

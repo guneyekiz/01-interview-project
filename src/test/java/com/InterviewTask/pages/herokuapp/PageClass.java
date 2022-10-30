@@ -4,7 +4,10 @@ import com.InterviewTask.utils.Driver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 public class PageClass {
 
@@ -26,12 +29,14 @@ public class PageClass {
     public WebElement addRemoveElementsText;
 
 
+    @FindBys
+            ({
+
+                    @FindBy(xpath = "//button[@class='added-manually']")
 
 
-
-
-
-
+            })
+    public List<WebElement> deleteALlElements;
 
 
 

@@ -65,9 +65,8 @@ public class Task extends TestBase {
 
 
         //stored all the elements in the list, since class is not unique it will store multiple elements
-        List<WebElement> countElement = driver.findElements(By.xpath("//*[@class=\"added-manually\"]"));
-
-        int actualResult = countElement.size();
+        List<WebElement> countElements = page.deleteALlElements;
+        int actualResult = countElements.size();
 
 
         System.out.println("Actual Result = " + actualResult + ",  Expected Result = " + howManyElement);
@@ -94,18 +93,18 @@ public class Task extends TestBase {
         }
 
         //stored all the elements in the list, since class is not unique it will store multiple elements
-        List<WebElement> countElement = driver.findElements(By.xpath("//*[@class=\"added-manually\"]"));
+        List<WebElement> countElements = page.deleteALlElements;
 
-        Assert.assertEquals(countElement.size(), howManyElement);
+        Assert.assertEquals(countElements.size(), howManyElement);
 
 
         for (int i = 0; i < howManyElement; i++) {
             page.deleteBtn.click();
         }
 
-        countElement = driver.findElements(By.xpath("//*[@class=\"added-manually\"]"));
-        if (countElement.size() != 0) {
-            Assert.fail("countElementSize should be zero but it is " + countElement.size());
+        countElements = driver.findElements(By.xpath("//*[@class=\"added-manually\"]"));
+        if (countElements.size() != 0) {
+            Assert.fail("countElementSize should be zero but it is " + countElements.size());
         }
 
         try {
@@ -118,8 +117,6 @@ public class Task extends TestBase {
 
 
     }
-
-
 
 
 }
