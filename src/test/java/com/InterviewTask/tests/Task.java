@@ -51,7 +51,7 @@ public class Task extends TestBase {
         }
 
 
-        //We are adding the number of the element we want to add
+        //We are adding the number of the element we want to add.
         int howManyElement = 5;
 
 
