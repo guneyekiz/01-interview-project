@@ -38,8 +38,12 @@ public class Task extends TestBase {
         //asserting if elements are displaying or not
         Assert.assertTrue(page.addRemoveElementsText.isDisplayed());
         Assert.assertTrue(page.addElementBtn.isDisplayed());
+
+
+
+
         try {
-            if (!page.deleteBtn.isDisplayed()) {
+            if (page.deleteBtn.isDisplayed()) {
                 Assert.fail("Delete button displayed before we are adding elements!");
             }
         } catch (NoSuchElementException ignored) {
